@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobieranie Karaków Gier</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .game-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .gta-san-andreas {
+            background-color: #007bff;
+        }
+        .schedule-1 {
+            background-color: #28a745;
+        }
+        .gta-vice-city {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="game-button gta-san-andreas" onclick="window.location.href='https://mega.nz/folder/kulGgIBK#3qIJfeyx-zwZH4crH4dyVw'">GTA San Andreas</button>
+        <button class="game-button schedule-1" onclick="window.location.href='https://mega.nz/folder/B2MTQSpa#UR7Iwk6BRvC0fvKbMuNCqg'">Schedule 1</button>
+        <button class="game-button gta-vice-city" onclick="window.location.href='https://mega.nz/folder/F7d2maBT#LGesNKHyrsnQhph-KgM5wA'">GTA Vice City</button>
+        <button class="game-button goat-simulator-3" onclick="window.location.href='https://mega.nz/folder/wrlTVJ7Z#vXK26PLv0jSgdVs3bmkjiQ'">Goat Simulator 3</button>
+    </div>
+    <script>
+        // Function to add a new button dynamically
+        function addGameButton(label, className, onClickHandler) {
+            const buttonContainer = document.querySelector('.button-container');
+            const newButton = document.createElement('button');
+            newButton.textContent = label;
+            newButton.className = `game-button ${className}`;
+            newButton.onclick = onClickHandler;
+            buttonContainer.appendChild(newButton);
+        }
+
+        // Example usage of addGameButton
+        // addGameButton('New Game', 'new-game-class', () => alert('New Game Clicked!'));
+    </script>
+</body>
+</html>
